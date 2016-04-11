@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 
 /**
  * 
- * @author Hugo Baés
+ * @author Hugo BaÃ©s
  */
 public class ComparativoJava7Java8
 {
@@ -18,7 +18,7 @@ public class ComparativoJava7Java8
         ActionListener actionListener;
         
         BlocoSimples blocoSimples;
-        BlocoGenerico<String, Integer> blocoGenerico;
+        BlocoGenerico<Integer, String> blocoGenerico;
         
         runnable = new Runnable() 
         {

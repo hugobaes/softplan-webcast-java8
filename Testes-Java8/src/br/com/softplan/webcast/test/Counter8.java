@@ -28,7 +28,9 @@ class Counter8
         Counter8 count = new Counter8();
         
         ExecutorService executor = Executors.newFixedThreadPool(32);
-        IntStream.range(0, 1_000_000).forEach(i -> executor.submit(count::increment));
+        IntStream
+        	.range(0, 1_000_000)
+        	.forEach(i -> executor.submit(count::increment));
         executor.shutdown();
         executor.awaitTermination(10, TimeUnit.SECONDS);
         
@@ -40,7 +42,7 @@ class Counter8
         int chunchoCount[] = new int[1];
 
         ExecutorService executor = Executors.newFixedThreadPool(32);
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 1_000_000; i++) {
             executor.submit(() -> chunchoCount[0]++);
         }
         executor.shutdown();
@@ -57,7 +59,7 @@ class Counter8
         final AtomicInteger count = new AtomicInteger();
 
         ExecutorService executor = Executors.newFixedThreadPool(32);
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 1_000_000; i++) {
             executor.submit(() -> count.incrementAndGet());
         }
         executor.shutdown();
