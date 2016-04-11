@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button id="theButton">Click Me</button>
+
+<script>
+var button = document.getElementById("theButton");
+button.addEventListener("click", function() {
+	alert(button);
+})
+
+button.addEventListener("click", function() {
+	button.style.color = 'red';
+})
+//button = 1;
+</script>
+</body>
+</html>
