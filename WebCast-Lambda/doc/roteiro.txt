@@ -1,4 +1,4 @@
-Sintaxe
+﻿Sintaxe
 -------
 
 Descreva a sintaxe das expressões lambda, incluindo exemplos de cada variação.
@@ -26,3 +26,27 @@ Roteiro
 6. Usar métodos existentes como lambdas 
 6.1 Referência estática a métodos the instância   
 
+
+Takes
+-----
+
+
+1 - Apresentação
+
+. Nome
+. Cargo
+. Objeto: WebCast  - Sintaxe da Lambda
+
+. Tópicos Abordados
+
+
+2 - Overview
+
+. Citar as características
+
+
+3 - Sintaxe
+
+. Como era feito no Java 7
+... Runnable
+. Como é feito no Java 8
