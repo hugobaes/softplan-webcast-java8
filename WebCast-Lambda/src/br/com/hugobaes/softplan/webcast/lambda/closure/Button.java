@@ -1,4 +1,4 @@
-package br.com.hugobaes.softplan.webcast.lambda.tutorial;
+package br.com.hugobaes.softplan.webcast.lambda.closure;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,16 +10,19 @@ public class Button
     public static void main(String[] args)
     {
         JFrame janela = new JFrame("Lambda");
+        
         JPanel panel = new JPanel();
+        janela.add(panel);
+        
         JButton button = new JButton("Teste");
-//        String e = "E"
+        panel.add(button);
+
+        //String e = "E"
         
         button.addActionListener(e -> JOptionPane.showMessageDialog(janela, e.getClass()));
         
         button.addActionListener(e -> button.setForeground(Color.RED));
         
-        panel.add(button);
-        janela.add(panel);
         showOnScreen(janela);
     }
     
@@ -53,9 +56,6 @@ public class Button
     
     static void showOnScreen(JFrame janela)
     {
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        Rectangle screen2 = ge.getScreenDevices()[0].getDefaultConfiguration().getBounds();
-        janela.setLocation(screen2.x, screen2.y + janela.getY());
         janela.setPreferredSize(new Dimension(200, 100));
         janela.pack();
         janela.setVisible(true);

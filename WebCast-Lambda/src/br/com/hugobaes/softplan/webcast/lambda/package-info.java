@@ -2,19 +2,33 @@
  * <p><b>2.Lambda</b></p>
  * <ol>
  *     <li>
- *         <p>ProgramaÁ„o funcional</p>
- *         <p>Explique o que È programaÁ„o funcional e expressıes lambda. Detalhe quais recursos da programaÁ„o funcional foram incluÌdos no Java 8. Explique como a inferÍncia de tipo funciona no Java 8.</p>
+ *         <p>Programa√ß√£o funcional</p>
+ *         <p>
+ *         Explique o que √© programa√ß√£o funcional e express√µes lambda. 
+ *         Detalhe quais recursos da programa√ß√£o funcional foram inclu√≠dos no Java 8.
+ *         Explique como a infer√™ncia de tipo funciona no Java 8.
+ *         </p>
  *     </li>
  *     <li>
  *         <p>Sintaxe</p>
- *         <p>Descreva a sintaxe das expressıes lambda, incluindo exemplos de cada variaÁ„o. Demonstre como È feita a referÍncia a mÈtodos. Explique as regras de escopo das expressıes lambda. Apresente as interfaces funcionais (pacote java.util.function).</p>
+ *         <p>
+ *         Descreva a sintaxe das express√µes lambda, incluindo exemplos de cada varia√ß√£o.
+ *         Demonstre como √© feita a refer√™ncia a m√©todos. 
+ *         Explique as regras de escopo das express√µes lambda. 
+ *         Apresente as interfaces funcionais (pacote java.util.function).
+ *         </p>
  *     </li>
  *     <li>
  *         <p>Exemplos de uso</p>
- *         <p>Apresente casos de uso para as expressıes lambda (Exemplos mais avanÁados). Apresente exemplos onde expressıes lambda ajudam a criar cÛdigo mais f·cil de ler e manter e evidencie casos na qual n„o devem ser aplicadas. Apresente como as expressıes lambda podem ser usadas na implementaÁ„o de <i>design patterns</i>.</p>
+ *         <p>
+ *         Apresente casos de uso para as express√µes lambda (Exemplos mais avan√ßados). 
+ *         Apresente exemplos onde express√µes lambda ajudam a criar c√≥digo mais f√°cil de ler e manter 
+ *         e evidencie casos na qual n√£o devem ser aplicadas. 
+ *         Apresente como as express√µes lambda podem ser usadas na implementa√ß√£oo de <i>design patterns</i>.
+ *         </p>
  *     </li>
  * </ol>
- * @author Hugo BaÈs
+ * @author Hugo Ba√©s
  */
 package br.com.hugobaes.softplan.webcast.lambda;
 

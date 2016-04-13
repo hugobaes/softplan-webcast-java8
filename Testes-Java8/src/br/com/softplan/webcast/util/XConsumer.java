@@ -1,4 +1,4 @@
-package br.com.softplan.webcast.test.util;
+package br.com.softplan.webcast.util;
 
 import java.util.function.Consumer;
 
@@ -11,5 +11,10 @@ public interface XConsumer<A> extends Consumer<A>, XFunction<A, Void>
         accept(t);
         return null;
     }
+
+	static <A> XConsumer<A> of(Consumer<A> consumer)
+	{
+		return consumer::accept;
+	}
 
 }
