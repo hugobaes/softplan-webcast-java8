@@ -157,7 +157,7 @@ public class _2_2_Sintaxe
         ObjDoubleConsumer<TipoParametro> objDoubleConsumer;
         
         
-        // convers�es
+        // conversões
         
         IntToLongFunction intToLongFunction;
         IntToDoubleFunction intToDoubleFunction;
