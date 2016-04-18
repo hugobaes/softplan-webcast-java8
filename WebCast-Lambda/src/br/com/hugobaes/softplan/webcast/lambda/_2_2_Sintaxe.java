@@ -1,5 +1,6 @@
 package br.com.hugobaes.softplan.webcast.lambda;
 
+import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.function.*;
 
@@ -34,6 +35,13 @@ public class _2_2_Sintaxe
 {
     public static void main(String[] args)
     {
+    	Comparator<String> c = (a, b) -> a.compareTo(b); 
+    	Runnable r = () -> System.out.println("Runnable");
+    	ActionListener aL = e -> System.out.println(e.getActionCommand());;
+    	
+    	Consumer<Integer> cons = System.out::println;
+    	
+    	ActionListener aL2 = null;
         new _2_2_Sintaxe().referenciaDeMetodos();
     }
     

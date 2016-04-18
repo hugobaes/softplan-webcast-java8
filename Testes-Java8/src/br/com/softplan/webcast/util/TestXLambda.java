@@ -1,12 +1,19 @@
 package br.com.softplan.webcast.util;
 
-import java.util.*;
+import java.awt.event.*;
+import java.util.UUID;
 import java.util.function.*;
 
 public class TestXLambda
 {
     public static void main(String... $)
     {
+        boolean JavaScript = false;
+        boolean Java7 = true;
+        boolean Java8 = true;
+
+        Object n = JavaScript ? Java7 : Java8 ;
+
     	function();
     	supplier();
     	consumer();
@@ -52,6 +59,7 @@ public class TestXLambda
     {
     	XConsumer<String> xconsumer = System.out::println;
         
+    	
     	Consumer<String> consumer = xconsumer;
         Function<String, Void> function = xconsumer;
         XFunction<String, Void> xfunction = xconsumer;
@@ -94,5 +102,14 @@ public class TestXLambda
     static <A, R> R execute(Function<A, R> function, A arg)
     {
     	return function.apply(arg);
+    }
+    
+    static
+    {
+    	XConsumer<ActionEvent> xevent = (e) -> System.out.println(e);	
+    	ActionListener listener = (e) -> System.out.println(e);
+    	
+    	xevent = listener::actionPerformed;
+    	listener = xevent::accept;	
     }
 }

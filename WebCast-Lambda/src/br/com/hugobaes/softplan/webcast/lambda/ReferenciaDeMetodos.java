@@ -23,7 +23,7 @@ public class ReferenciaDeMetodos
         System.out.println("\n - Tipagem Dinamica - \n");
         tipagemDinamica();
         
-        /**​/
+        /**/
         
         System.out.println("\n - Abusando da Inferencia de Tipos - \n");
         abusandoDaInferenciaDeTipos();
