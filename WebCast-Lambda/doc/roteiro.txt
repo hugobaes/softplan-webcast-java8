@@ -1,28 +1,79 @@
-Sintaxe
+﻿Sintaxe
+
+
+
 -------
 
 Descreva a sintaxe das expressões lambda, incluindo exemplos de cada variação.
+
 Demonstre como é feita a referência a métodos.
+
 Explique as regras de escopo das expressões lambda.
+
 Apresente as interfaces funcionais (pacote java.util.function).
 
 Roteiro
 -------
 
 1. Overview de Lambda
+
 2. Sintaxe
 2.1. Transformação Classe -> Anonymous Class -> Lambda
 2.2. Comparativo da Classe com Lambda
-3. Exemplos
-3.1. Exemplo de Lambda com 1 argumento e retorno
-3.2. Exemplo de Lambda com 2 argumentos e retorno 
-3.3. Exemplo de Lambda sem argumentos e retorno 
-3.4. Exemplo de Lambda sem argumentos e sem retorno 
-3.5. Exemplo de Lambda com 1 argumento e 2 instruções
+
 4. Reras de Escopo
-4.1. Mostrar escopo de variável local, parametros e atributos de instância
+4.1. Acesso ao escopo de onde é declarado
+4.2. Mostrar acesso de variável local (final), parametros e atributos de instância
+4.3. Captura do escopo local
+
+
+3. Exemplos
+3.1. Exemplo de Lambda com 1 argumento e retorno    
+3.2. Exemplo de Lambda com 2 argumentos e retorno   [Comparator]
+3.3. Exemplo de Lambda sem argumentos e retorno     []
+3.4. Exemplo de Lambda sem argumentos e sem retorno [Runnable]
+3.5. Exemplo de Lambda com 1 argumento e 2 instruções
+
 5. Apresentar as principais interfaces funcionais
 5.1. Overview das variações das interfaces funcionais
+
 6. Usar métodos existentes como lambdas 
 6.1 Referência estática a métodos the instância   
+
+
+Takes
+-----
+
+
+1 - Apresentação
+
+. Nome
+. Cargo
+. Objeto: WebCast  - Sintaxe da Lambda
+
+. Tópicos Abordados
+
+
+2 - Overview
+
+. Citar as características
+
+
+3 - Sintaxe
+
+. Como era feito no Java 7
+... Runnable
+. Como é feito no Java 8
+
+
+
+
+
+
+
+
+
+
+
+
 
