@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  */
 public class ComparativoJava7Java8
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String... λ) throws Exception
     {
         Runnable runnable;
         Callable<?> callable;

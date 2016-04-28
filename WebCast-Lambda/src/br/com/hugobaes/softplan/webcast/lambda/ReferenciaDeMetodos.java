@@ -6,7 +6,7 @@ import java.util.function.*;
 
 public class ReferenciaDeMetodos
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String... λ) throws Exception
     {
         /**​/
         

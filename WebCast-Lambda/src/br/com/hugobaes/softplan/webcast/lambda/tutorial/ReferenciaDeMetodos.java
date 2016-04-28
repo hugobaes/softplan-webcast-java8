@@ -6,22 +6,61 @@ import java.util.function.*;
 
 public class ReferenciaDeMetodos
 {
-    public static void main(String... $)
+    public static void main(String... λ)
     {
-        Function<String, Integer> function;
-        Supplier<LocalDate> supplier;
-        Consumer<Collection<?>> consumer;
-        Predicate<String> predicate;
-
-        function = String::length; 
-        supplier = LocalDate::now;
-        consumer = System.out::println;
-        predicate = "my long phrase"::contains;
+        /*** Método Estático ***/
         
-        System.out.println(function.apply("12345"));
-        System.out.println(supplier.get());
-        consumer.accept(Arrays.asList(1,2,3,4,5));
-        System.out.println(predicate.test("long"));
+        Function<String, Integer> intParser;
+        
+        intParser = s -> Integer.valueOf(s);
+        
+        intParser = Integer::valueOf;
+        
+        System.out.println("Int: " + intParser.apply("000012345"));
+        
+        
+        
+        
+        /*** Construtor ***/
+        
+        Supplier<Date> dateGenerator;
+        
+        dateGenerator = () -> new Date();
+        
+        dateGenerator = Date::new;
+        
+        System.out.println("Now: " + dateGenerator.get());
+        
+        
+        
+        
+        /*** Método de Instância de um objeto específico ***/
+        
+        List<String> fruitList = Arrays.asList("apple", "orange", "watermelon");
 
+        Predicate<String> isFruit;
+        
+        isFruit = s -> fruitList.contains(s);
+        
+        isFruit = fruitList::contains;
+        
+        System.out.println("Airplane? " + isFruit.test("airplane"));
+        
+
+        
+        
+        /*** Método de Instância de um objeto arbitário ***/
+        
+        Function<String, String> toUpper;
+        
+        toUpper = s -> s.toUpperCase();
+        
+        toUpper = String::toUpperCase;
+        
+        System.out.println(toUpper.apply("O Rly? Ya Rly! No Way!"));
+        
+        
+        
+        /**************************************************/
     }
 }

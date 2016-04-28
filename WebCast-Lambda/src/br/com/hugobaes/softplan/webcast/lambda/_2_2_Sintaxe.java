@@ -33,7 +33,7 @@ import java.util.function.*;
  */
 public class _2_2_Sintaxe
 {
-    public static void main(String[] args)
+    public static void main(String... λ)
     {
     	Comparator<String> c = (a, b) -> a.compareTo(b); 
     	Runnable r = () -> System.out.println("Runnable");

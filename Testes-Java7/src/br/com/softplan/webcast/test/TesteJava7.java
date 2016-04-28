@@ -6,7 +6,7 @@ import java.util.concurrent.Callable;
 public class TesteJava7
 {
     
-    public static void main(String[] args) throws Exception
+    public static void main(String... λ) throws Exception
     {
         final int x = 123_456;
         List<Integer> inteiros = Arrays.asList(5, 1, 3, 2, 4, 1);

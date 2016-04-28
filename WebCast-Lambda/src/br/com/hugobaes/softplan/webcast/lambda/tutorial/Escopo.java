@@ -2,35 +2,40 @@ package br.com.hugobaes.softplan.webcast.lambda.tutorial;
 
 import java.util.function.*;
 
-import br.com.hugobaes.softplan.webcast.lambda.tutorial.XBurger.That;
-
 public class Escopo
 {
-    private static int staticCount;
+    static int staticCount;
     
-    private int instanceCount;
+    int instanceCount;
     
-    public static void instanceMethod()
+    public void main(String... λ)
     {
         int[] localCount = {0};
-
-        Runnable staticIncrement = () -> staticCount++;
-//        Runnable instanceIncrement = () -> instanceCount++;
-        Runnable localIncrement = () -> localCount[0]++;
         
-        Runnable localRead = () -> System.out.println(localCount[0]);
-        Runnable shadow = () -> {
-//          int localCount = 1;
-        };
+        Runnable r = () -> System.out.println(localCount[0]++);
+        
     }
 }
 
 
 
-class XBurger 
+
+
+
+
+
+
+
+
+
+
+class X 
 {
-    static class That { static int x; }
-    int x;
-    
-    Consumer<Integer> eat(int burger) { return (x) -> That.x = this.x = x-burger;  }
+    static X burger;
+    X x;
+}
+
+class XBurger extends X
+{
+    Consumer<XBurger> eat(X burger) { return XBurger -> X.burger = this.x = burger; }
 }

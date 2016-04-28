@@ -7,19 +7,20 @@ import javax.swing.*;
 
 public class Button_Java_8
 {
-    public static void main(String...$)
+    public static void main(String... λ)
     {
-        JFrame frame = new JFrame("Lambda - Java 8");
+        JFrame   frame = new JFrame("Lambda - Java 8");
         JButton button = new JButton("Click Me");
         frame.add(button);
-
+        
         
         button.addActionListener(e -> button.setBackground(Color.RED));
-        
+
         
         button.addActionListener(
         	e -> JOptionPane.showMessageDialog(frame, e.getActionCommand())
         );
+        
         
         showOnScreen(frame);
     }

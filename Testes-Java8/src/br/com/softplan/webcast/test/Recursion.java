@@ -7,7 +7,7 @@ public class Recursion
 	static UnaryOperator<Integer> factorial;
 	static { factorial = i -> i == 0 ? 1 : i * factorial.apply( i - 1 ); }
 	
-    public static void main(String... $) 
+    public static void main(String... λ) 
     {
     	System.out.println("5! = " + factorial.apply(5));
     	

@@ -5,7 +5,7 @@ import java.util.function.*;
 
 public class Inferencia
 {
-    public static void main(String[] args) throws Exception
+    public static void main(String... λ) throws Exception
     {
         differentParamType();
         dynamicTypeLambda();

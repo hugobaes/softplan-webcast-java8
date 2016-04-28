@@ -1,25 +1,53 @@
 package br.com.hugobaes.softplan.webcast.lambda.tutorial;
 
-import java.time.LocalDate;
-import java.util.Collection;
 import java.util.function.*;
+import java.util.*;
+import java.time.LocalDate;
 
 public class NovasInterfaces
 {
-    // Principais interfaces
+    /** Principais interfaces **/
+    public static void main(String... λ)
     {
-        Function<String, Integer> function;
-        Supplier<LocalDate> supplier;
-        Consumer<Collection<?>> consumer;
-        Predicate<Double> predicate;
+        // --- Declaração da Interface Funcional --- //
         
-        function = s -> s.length(); 
-        supplier = () -> LocalDate.now();
-        consumer = c -> System.out.println(c.toString());
-        predicate = d -> d > 0.5;
+        Function<String, Integer> strToIntFunction;
+        Supplier<LocalDate>       dateSupplier;
+        Consumer<Collection<?>>   collectionConsumer;
+        Predicate<Double>         doublePredicate;
+        
+        
+        
+        // --- Expressão Lambda --- //
+        
+        strToIntFunction   = s  -> s.length(); 
+        dateSupplier       = () -> LocalDate.now();
+        collectionConsumer = c  -> System.out.println("collection: " + c.toString());
+        doublePredicate    = d  -> d >= 0.0;
+        
+        
+        
+        // --- Execução do Lambda --- //
+        
+        Integer length = strToIntFunction.apply("Anticonstitucionalissimamente");
+        System.out.println("length: " + length);
+        
+        LocalDate now = dateSupplier.get();
+        System.out.println("now: " + now);
+        
+        List<Integer> theNumbers = Arrays.asList(4,8,15,16,23,42);
+        collectionConsumer.accept(theNumbers);
+        
+        boolean positive = doublePredicate.test(-1.618);
+        System.out.println("positive: " + positive);
     }
     
-    // 2 Argumentos
+    
+    
+    
+    
+    
+    /** 2 Argumentos **/
     {
         BiFunction<String, String, Integer> biFunction;
         BiConsumer<String, Collection<?>> biConsumer;
@@ -30,56 +58,56 @@ public class NovasInterfaces
         biPredicate = (d1, d2) -> d1 > d2;
     }
     
-    // Subclasses de Function
+    /** Function de um único tipo **/
     {
-        Function<String, String> function = str -> str.toUpperCase();
-        UnaryOperator<String> unary = str -> str.toUpperCase();
+        Function<String, String> function = s -> s.toUpperCase();
+        
+        UnaryOperator<String> unary = s -> s.toUpperCase();
         
         function = unary;
         
-        BiFunction<String, String, String> biFunction = (str1, str2) -> str1.concat(str2);
-        BinaryOperator<String> binary = (str1, str2) -> str1.concat(str2);
+        
+        BiFunction<String, String, String> biFunction = 
+                (s1, s2) -> s1.concat(s2);
+                
+        BinaryOperator<String> binary = (s1, s2) -> s1.concat(s2);
         
         biFunction = binary;
     }
     
-    // Primitivas como argumentos
+    /** Variações com tipos primitivos **/
     {
         IntFunction<String> intFunction;
+        IntSupplier intSupplier;
         IntConsumer intConsumer;
         IntPredicate intPredicate;
         IntUnaryOperator intUnary;
         IntBinaryOperator intBinary;
+        ToIntFunction<String> toIntFunction;
+        ToIntBiFunction<String, Double> toIntBiFunction;
+
         
         
         LongFunction<String> longFunction;
+        LongSupplier longSupplier;
         LongConsumer longConsumer;
         LongPredicate longPredicate;
         LongUnaryOperator longUnary;
         LongBinaryOperator longBinary;
+        ToLongFunction<String> toLongFunction;
+        ToLongBiFunction<String, Double> toLongBiFunction;
+        
 
         
         DoubleFunction<String> doubleFunction;
+        DoubleSupplier doubleSupplier;
         DoubleConsumer doubleConsumer;
         DoublePredicate doublePredicate;
         DoubleUnaryOperator doubleUnary;
         DoubleBinaryOperator doubleBinary;
-
-    }
-    
-    // Primitivas como Retorno
-    {
-        IntSupplier intSupplier;
-        ToIntFunction<String> toIntFunction;
-        ToIntBiFunction<String, Double> toIntBiFunction;
-        
-        LongSupplier longSupplier;
-        ToLongFunction<String> toLongFunction;
-        ToLongBiFunction<String, Double> toLongBiFunction;
-        
-        DoubleSupplier doubleSupplier;
         ToDoubleFunction<String> toDoubleFunction;
         ToDoubleBiFunction<String, Double> toDoubleBiFunction;
+ 
         
         BooleanSupplier booleanSupplier;
     }

@@ -14,7 +14,7 @@ class Counter7
         return ""+count;
     }
     
-    public static void main(String[] args) throws Exception
+    public static void main(String... λ) throws Exception
     {
         objectCounter();
         conventionalCounter();

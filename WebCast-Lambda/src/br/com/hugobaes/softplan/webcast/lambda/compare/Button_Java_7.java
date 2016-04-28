@@ -7,11 +7,12 @@ import javax.swing.*;
 
 public class Button_Java_7
 {
-    public static void main(String...$)
+    public static void main(String... λ)
     {
-        JFrame frame = new JFrame("Lambda - Java 7");
+        JFrame  frame  = new JFrame("Lambda - Java 7");
         JButton button = new JButton("Click Me");
         frame.add(button);
+        
         
         button.addActionListener(new ActionListener() 
         {
@@ -21,8 +22,6 @@ public class Button_Java_7
                 button.setBackground(Color.RED);
             }
         });
-        
-        
         
         
         button.addActionListener(new ActionListener() 

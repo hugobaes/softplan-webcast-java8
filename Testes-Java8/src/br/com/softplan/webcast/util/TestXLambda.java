@@ -6,7 +6,7 @@ import java.util.function.*;
 
 public class TestXLambda
 {
-    public static void main(String... $)
+    public static void main(String... λ)
     {
         boolean JavaScript = false;
         boolean Java7 = true;

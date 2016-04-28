@@ -58,7 +58,7 @@ public class Scope
         }
     }
     
-    public static void main(String... $)
+    public static void main(String... λ)
     {
 
         
