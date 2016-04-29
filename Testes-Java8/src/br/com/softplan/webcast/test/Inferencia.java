@@ -53,18 +53,18 @@ public class Inferencia
     static void dynamicTypeLambda()
     {
         Function<String, String> function = x -> x.toUpperCase();
-        UnaryOperator<String> unary = x -> x.toUpperCase();
-        StringTransformer transformer = x -> x.toUpperCase();
+        UnaryOperator<String> unary       = x -> x.toUpperCase();
+        StringTransformer transformer     = x -> x.toUpperCase();
         
         String theString = "Desafio Java 8";
         
-        System.out.println("Dynamic: function -> " + function.apply(theString));
-        System.out.println("Dynamic: unary -> " + unary.apply(theString));
+        System.out.println("Dynamic: function -> "    + function.apply(theString));
+        System.out.println("Dynamic: unary -> "       + unary.apply(theString));
         System.out.println("Dynamic: transformer -> " + transformer.transform(theString));
         
         // Method references
-        function = String::toUpperCase;
-        unary = String::toUpperCase;
+        function    = String::toUpperCase;
+        unary       = String::toUpperCase;
         transformer = String::toUpperCase;
     }
     

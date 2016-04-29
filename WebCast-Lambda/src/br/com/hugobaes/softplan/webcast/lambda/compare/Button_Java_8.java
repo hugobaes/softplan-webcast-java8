@@ -9,7 +9,7 @@ public class Button_Java_8
 {
     public static void main(String... λ)
     {
-        JFrame   frame = new JFrame("Lambda - Java 8");
+        JFrame  frame  = new JFrame("Lambda - Java 8");
         JButton button = new JButton("Click Me");
         frame.add(button);
         

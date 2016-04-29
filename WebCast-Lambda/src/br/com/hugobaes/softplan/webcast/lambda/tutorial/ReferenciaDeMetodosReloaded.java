@@ -1,18 +1,15 @@
 package br.com.hugobaes.softplan.webcast.lambda.tutorial;
 
-import java.time.LocalDate;
 import java.util.*;
 import java.util.function.*;
 
-public class ReferenciaDeMetodos
+public class ReferenciaDeMetodosReloaded
 {
     public static void main(String... λ)
     {
         /*** Método Estático ***/
         
-        Function<String, Integer> intParser;
-        
-        intParser = Integer::valueOf;
+        Function<String, Integer> intParser = Integer::valueOf;
         
         intParser = s -> Integer.valueOf(s);
         
@@ -21,17 +18,25 @@ public class ReferenciaDeMetodos
         
         
         
+        
         /*** Construtor ***/
         
-        Supplier<Date> dateGenerator;
-        
-        dateGenerator = Date::new;
+        Supplier<Date> dateGenerator = Date::new;
         
         dateGenerator = () -> new Date();
         
         System.out.println("Now: " + dateGenerator.get());
         
+        
 
+        
+        Function<Long, Date> dateConverter = Date::new;
+        
+        dateConverter = l -> new Date(l);
+        
+        System.out.println("Not Now: " + dateConverter.apply(489578827777L));
+        
+        
         
         
         
@@ -39,9 +44,7 @@ public class ReferenciaDeMetodos
         
         List<String> fruitList = Arrays.asList("apple", "orange", "watermelon");
 
-        Predicate<String> isFruit;
-        
-        isFruit = fruitList::contains;
+        Predicate<String> isFruit = fruitList::contains;
         
         isFruit = s -> fruitList.contains(s);
         
@@ -50,19 +53,22 @@ public class ReferenciaDeMetodos
 
         
         
-        /*** Método de Instância de um objeto arbitrário ***/
+        /*** Método de Instância de um objeto arbitário ***/
         
-        Function<String, String> toUpper;
+        BiPredicate<List<String>, String> isOnList = List::contains;
         
-        toUpper = String::toUpperCase;
+        isOnList = (list, str) -> list.contains(str);
         
-        toUpper = s -> s.toUpperCase();
-        
-        System.out.println(toUpper.apply("O Rly? Ya Rly! No Way!"));
+        System.out.println("Airplane?¿? " + isOnList.test(fruitList, "airplane"));
         
         
+        
+        
+        List<String> vehicleList = Arrays.asList("car", "boat", "airplane");
+        
+        System.out.println("Airplane!!1! " + isOnList.test(vehicleList, "airplane"));
+
         
         /**************************************************/
     }
 }
-

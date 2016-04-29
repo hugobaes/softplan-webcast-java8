@@ -4,16 +4,15 @@ import java.util.function.*;
 
 public class Escopo
 {
-    static int staticCount;
+    static int staticCount = 0;
     
-    int instanceCount;
+    int instanceCount = 0;
     
     public void main(String... λ)
     {
-        int[] localCount = {0};
-        
+        int localCount[] = {0};
+
         Runnable r = () -> System.out.println(localCount[0]++);
-        
     }
 }
 
